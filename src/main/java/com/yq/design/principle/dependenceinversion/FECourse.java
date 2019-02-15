@@ -7,5 +7,6 @@ public class FECourse implements ICourse {
 
     public void studyCourse() {
         System.out.println("Geely学习前端课程");
+
     }
 }

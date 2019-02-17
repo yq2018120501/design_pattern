@@ -11,12 +11,7 @@ public class JavaDiscountCourse extends JavaCourse {
         super(id, name, price);
     }
 
-    public Double getOrignPrice(){
-        return super.getPrice();
-    }
-
-    @Override
-    public Double getPrice() {
+    public Double getDiscountPrice(){
         BigDecimal bigDecimal = new BigDecimal(super.getPrice());
         BigDecimal bigDecimal2 = new BigDecimal(0.8);
         BigDecimal result = bigDecimal.multiply(bigDecimal2);
@@ -24,5 +19,10 @@ public class JavaDiscountCourse extends JavaCourse {
         String str = df.format(result);
 
         return Double.valueOf(str);
+    }
+
+    @Override
+    public Double getPrice() {
+        return super.getPrice();
     }
 }

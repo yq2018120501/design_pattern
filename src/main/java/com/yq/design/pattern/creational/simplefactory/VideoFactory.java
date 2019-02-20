@@ -1,4 +1,4 @@
-package com.yq.design.principle.creational.simplefactory;
+package com.yq.design.pattern.creational.simplefactory;
 
 /**
  * Created by Mr.Yang on 2019/2/17 0017.
@@ -17,12 +17,13 @@ public class VideoFactory {
         }
         return video;
     }
-//    public Video getVideo(String type){
-//        if ("java".equalsIgnoreCase(type)) {
-//            return new JavaVideo();
-//        }else if ("python".equalsIgnoreCase(type)){
-//            return new PythonVideo();
-//        }
-//        return null;
-//    }
+
+    public Video getVideo(String type){
+        if ("java".equalsIgnoreCase(type)) {
+            return new JavaVideo();
+        }else if ("python".equalsIgnoreCase(type)){
+            return new PythonVideo();
+        }
+        return null;
+    }
 }
